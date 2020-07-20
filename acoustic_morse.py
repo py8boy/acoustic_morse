@@ -71,6 +71,12 @@ general = {'a': '.-', 'b': '-...',
 
 convertedData = []
 
-print('\n \033[32m Do not type accents, exclamation marks or symbols \033[m')
-userMsg = input(str('Enter your message: ')).lower()
-callFunctions()
+while (True):
+    try:
+        print('\n \033[32m Do not type accents, exclamation marks or symbols \033[m')
+        userMsg = input(str('Enter your message: ')).lower()
+        callFunctions()
+
+    except KeyError:
+        print('\033[31m Invalid text, please type your text again \033[m')
+
